@@ -6,7 +6,7 @@ post "/deploy/:key" do
   url = "https://api.speedcurve.com/v1/deploy"
   body = {
     'detail' => "#{params[:app]} #{params[:release]} was deployed to Heroku by #{params[:user]}",
-    'note' => params[:release]
+    'note' => "#{params[:app]} #{params[:release]}"
   }
   auth = {
     :username => params[:key],
