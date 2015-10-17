@@ -1,0 +1,10 @@
+{
+  "name": "Heroku SpeedCurve",
+  "description": "Track Heroku deploys in SpeedCurve",
+  "keywords": [
+    "heroku",
+    "ifttt"
+  ],
+  "repository": "https://github.com/gesteves/heroku-speedcurve",
+  "success_url": "https://github.com/gesteves/heroku-speedcurve"
+}
