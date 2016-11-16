@@ -2,9 +2,10 @@
 require "sinatra"
 require "httparty"
 
-post "/deploy/:key" do
+post "/deploy/:key/:site_id" do
   url = "https://api.speedcurve.com/v1/deploy"
   body = {
+    site_id: params[:site_id],
     detail: "#{params[:app]} #{params[:release]} was deployed to Heroku by #{params[:user]}",
     note: "#{params[:app]} #{params[:release]}",
   }
