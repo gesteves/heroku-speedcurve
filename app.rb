@@ -6,8 +6,8 @@ post "/deploy/:key/:site_id" do
   url = "https://api.speedcurve.com/v1/deploy"
   body = {
     site_id: params[:site_id],
-    detail: "#{params[:app]} #{params[:release]} #{params[:git_log]} was deployed to Heroku by #{params[:user]}",
-    note: "#{params[:app]} #{params[:release]} #{params[:git_log]}",
+    detail: %Q{#{params[:app]} #{params[:release]} #{params[:head]} #{params[:git_log]} was deployed to Heroku by #{params[:user]}},
+    note: %Q{#{params[:app]} #{params[:release]} #{params[:head]} #{params[:git_log]}},
   }
   auth = {
     username: params[:key],
