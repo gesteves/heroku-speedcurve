@@ -13,7 +13,7 @@ post "/deploy/:key/:site_id" do
     username: params[:key],
     password: "x",
   }
-  sleep 20
+  sleep 30
   response = HTTParty.post(url, body: body, basic_auth: auth)
   status response.code
   body response.body
